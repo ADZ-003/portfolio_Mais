@@ -3,108 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Mais | Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css" />
 </head>
-<body>
-  <header class="navbar">
-    <div class="logo">M.A.I.S.</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+<body class="bg-black text-white font-sans">
+  <!-- Navbar -->
+  <header class="bg-black border-b border-gray-800 flex justify-between items-center px-[10%] py-5">
+    <div class="text-2xl font-bold">M.A.I.S.</div>
+    <nav class="space-x-6">
+      <a href="assets/cv.pdf" target="_blank" class="text-gray-300 hover:text-blue-400">Download CV</a>
+      <a href="#about" class="text-gray-300 hover:text-blue-400">About</a>
+      <a href="#portfolio" class="text-gray-300 hover:text-blue-400">Projects</a>
+      <a href="#contact" class="text-gray-300 hover:text-blue-400">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>M Adzkiya Ikhwan As</h1>
-      <p>IT Specialist with a passion for technology and digital innovation.</p>
-      <a href="#about" class="read-more">Read More</a>
+  <!-- Hero -->
+  <section class="flex flex-col md:flex-row justify-between items-center px-[10%] py-20 bg-gray-900">
+    <div class="flex-1">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">M Adzkiya Ikhwan As</h1>
+      <p class="text-lg text-gray-300">IT Specialist with a passion for technology and digital innovation.</p>
+      <a href="#about" class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        Read More
+      </a>
     </div>
-    <div class="hero-img">
-      <img src="assets/mais.png" alt="Adzkiya" />
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm Adzkiya. I specialize in the field of Information Technology. I have experience in web development, networking, and digital systems. I enjoy solving technical problems and turning ideas into real-world solutions.</p>
-  </section>
-
-  <section id="portfolio" class="portfolio">
-    <h2>Recent Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <img src="assets/web.png" alt="project" width="320" height="190">
-      </div>
-      <div class="project-card">Coming Soon</div>
+    <div class="flex-1 mt-10 md:mt-0 text-center">
+      <img src="assets/mais.png" alt="Adzkiya" class="w-72 mx-auto rounded-lg">
     </div>
   </section>
 
-   <section class="skills-section" id="skills">
-  <h1>My Skills</h1>
-  <p>Some technologies that I am and have been studying.</p>
-
-  <div class="skills-grid">
-
-    <div class="skill">
-      <div class="skill-header">
-        <span>HTML</span>
-        <span class="percent">60%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 60%;"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span>CSS</span>
-        <span class="percent">48%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 48%;"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span>JavaScript</span>
-        <span class="percent">17%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 17%;"></div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-header">
-        <span>Bootstrap</span>
-        <span class="percent">36%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 36%;"></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <section id="contact" class="contact">
-    <h2>get in touch</h2>
-    <p>If you have any questions or want to collaborate, feel free to reach out!</p>
-    <a href="https://github.com/ADZ-003" class="link1">
-      <img src="assets/github-142-svgrepo-com.svg" style="width: 18px; height: 18px; margin-right: 6px;">GitHub</a>
-    <a href="" class="link2">
-      <img src="assets/linkedin-logo-bold-svgrepo-com.svg" style="width: 18px; height: 18px; margin-right: 6px;">linkedin</a>
-    <a href="mailto:muhammadadzkiya821@gmail.com" class="link3">
-      <img src="assets/email-1564-svgrepo-com.svg" style="width: 18px; height: 18px; margin-right: 6px;">Email</a>
+  <!-- About -->
+  <section id="about" class="px-[10%] py-20 bg-black">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="text-lg leading-relaxed text-gray-300">
+      Hi! I'm Adzkiya. I specialize in the field of Information Technology. I have experience in web development, networking, and digital systems. I enjoy solving technical problems and turning ideas into real-world solutions.
+    </p>
   </section>
 
-  <footer>
+  <!-- Portfolio -->
+  <section id="portfolio" class="px-[10%] py-20 bg-gray-900">
+    <h2 class="text-3xl font-bold mb-6">Recent Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project with image -->
+      <div class="bg-black border border-gray-800 rounded-xl p-6">
+        <img src="assets/web.png" alt="project" class="rounded-md mb-4 w-full object-cover">
+        <h3 class="text-xl font-semibold mb-2">KasMatic</h3>
+        <p class="text-gray-400 mb-3">Laravel-based web application designed to help cash management in a classroom environment to be more organized, transparent, and efficient.</p>
+        <p class="text-sm text-blue-400 font-medium">Tech: Laravel, Blade, MySQL, CSS</p>
+      </div>
+      <div class="bg-black border border-gray-800 rounded-xl p-6">
+        <img src="assets/Kasiraj.png" alt="project" class="rounded-md mb-4 w-full object-cover">
+        <h3 class="text-xl font-semibold mb-2">Kasiraj</h3>
+        <p class="text-gray-400 mb-3">A Flutter-based cashier application designed to help shoppers order items more easily, without having to queue and simplify transactions at the cashier.</p>
+        <p class="text-sm text-blue-400 font-medium">Tech: Flutter, Dart</p>
+      </div>
+      <!-- Project description only -->
+      <!-- <div class="bg-black border border-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-2">Inventory Management System</h3>
+        <p class="text-gray-400 mb-3">
+          Backend system to manage product stock, sales, and reports for a retail store.
+        </p>
+        <p class="text-sm text-blue-400 font-medium">Tech: Laravel, blade, MySQL, CSS</p>
+        <a href="https://github.com/ADZ-003/inventory"
+           class="inline-block mt-3 text-sm px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          View on GitHub
+        </a>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-[10%] py-20 bg-gray-900">
+    <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+    <p class="mb-6 text-gray-300">If you have any questions or want to collaborate, feel free to reach out!</p>
+    <div class="flex flex-wrap gap-4">
+      <a href="https://github.com/ADZ-003" class="flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        <img src="assets/github-142-svgrepo-com.svg" class="w-5 h-5 mr-2"> ADZ-003
+      </a>
+      <a href="#" class="flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        <img src="assets/linkedin-logo-bold-svgrepo-com.svg" class="w-5 h-5 mr-2"> LinkedIn
+      </a>
+      <a href="mailto:muhammadadzkiya821@gmail.com" class="flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        <img src="assets/email-1564-svgrepo-com.svg" class="w-5 h-5 mr-2"> muhammadadzkiya821@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-5 bg-black border-t border-gray-800 text-gray-500">
     <p>© 2025 Mais Portfolio. All rights reserved.</p>
   </footer>
 </body>
